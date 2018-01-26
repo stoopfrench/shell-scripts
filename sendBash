@@ -1,6 +1,6 @@
 #!/bin/bash
 
-##Script that sends the .bash_aliases file up to a remote server
+##SENDS '.bash_aliases' TO SERVER AT $1
 
 scp ~/.bash_aliases root@$1:.bash_aliases
 

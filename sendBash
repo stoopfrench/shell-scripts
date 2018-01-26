@@ -1,5 +1,7 @@
 #!/bin/bash
 
+##Script that sends the .bash_aliases file up to a remote server
+
 scp ~/.bash_aliases root@$1:.bash_aliases
 
 echo ".bash_aliases uploaded to remote server"

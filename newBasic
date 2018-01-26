@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cp -rfiv ~/Documents/TEMPLATES/JQ_BS_EXPRESS ~/Documents/Projects/$1
+
+echo "BASIC template copied, renamed "$1" and sent to Projects"

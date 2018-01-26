@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cp -rfiv ~/Documents/TEMPLATES/NODE_APP ~/Documents/Projects/$1
+
+echo "NODE template copied, renamed "$1" and sent to Projects"

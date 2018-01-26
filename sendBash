@@ -1,0 +1,5 @@
+#!/bin/bash
+
+scp ~/.bash_aliases root@$1:.bash_aliases
+
+echo ".bash_aliases uploaded to remote server"

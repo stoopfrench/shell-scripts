@@ -29,3 +29,7 @@ if [ $choice = '4' ]
 	cp -rfiv ~/Documents/TEMPLATES/NODE_APP ~/Documents/Projects/$name
 	echo "NODE template copied, renamed "$name" and sent to Projects"
 fi
+
+
+
+

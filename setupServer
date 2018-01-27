@@ -12,8 +12,8 @@ npm install -g forever &&
 echo 'installed Forever.js'
 if [ $1 = 'mongo' ]
 	then
-		apt install mongodb-server &&
-		echo 'installed mongo'
+	apt install mongodb-server &&
+	echo 'installed mongo'
 fi
 echo 'packages installed succesfully'
 

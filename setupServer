@@ -1,0 +1,30 @@
+#!/bin/bash
+
+## Automates NODE, NPM, FOREVER, MONGO installation on a server
+
+apt-get update && 
+echo 'updated'
+apt install npm && 
+echo 'installed npm'
+apt install nodejs-legacy &&
+echo 'installed Node.js'
+npm install -g forever &&
+echo 'installed Forever.js'
+if [ $1 = 'mongo' ]
+	then
+		apt install mongodb-server &&
+		echo 'installed mongo'
+fi
+echo 'packages installed succesfully'
+
+echo 'delete script?[y/n]'
+read confirm
+if [ $confirm = 'y' ]
+	then
+	rm $0
+	echo 'script deleted'
+fi
+
+
+
+

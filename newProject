@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo 'Project Type?'
+echo '1. Basic'
+echo '2. Vue'
+echo '3. Vue SPA'
+echo '4. Node'
+read choice
+
+echo 'Title?'
+read name
+
+if [ $choice = '1' ]
+	then
+	cp -rfiv ~/Documents/TEMPLATES/JQ_BS_EXPRESS ~/Documents/Projects/$name
+	echo "BASIC template copied, renamed "$name" and sent to Projects"
+fi
+if [ $choice = '2' ]
+	then
+	cp -rfiv ~/Documents/TEMPLATES/VUE_BASIC ~/Documents/Projects/$name
+	echo "VUE template copied, renamed "$name" and sent to Projects"
+fi
+if [ $choice = '3' ]
+	then
+	echo 'unavailable'
+fi
+if [ $choice = '4' ]
+	then
+	cp -rfiv ~/Documents/TEMPLATES/NODE_APP ~/Documents/Projects/$name
+	echo "NODE template copied, renamed "$name" and sent to Projects"
+fi

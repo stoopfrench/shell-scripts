@@ -2,8 +2,18 @@
 
 ##SENDS '.bash_aliases' TO SERVER AT $1
 
-scp ~/.bash_aliases root@$1:.bash_aliases
-echo ".bash_aliases uploaded to remote server"
+echo 'copy .bash_aliases?[y/n]'
+read ba 
+if [ $ba = 'y' ]
+	then
+	scp ~/.bash_aliases root@$1:.bash_aliases
+	echo ".bash_aliases uploaded to remote server"
+fi
 
-scp ~/Documents/SCRIPTS/setupServer root@$1:setup
-echo 'script copied to server'
+echo 'copy script?[y/n]'
+read script
+if [ $script = 'y' ]
+	then
+	scp ~/Documents/SCRIPTS/setupServer root@$1:setup
+	echo 'script copied to server'
+fi

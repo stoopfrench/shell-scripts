@@ -10,10 +10,10 @@ if [ $ba = 'y' ]
 	echo ".bash_aliases uploaded to remote server"
 fi
 
-echo 'copy script?[y/n]'
+echo 'copy setup script?[y/n]'
 read script
 if [ $script = 'y' ]
 	then
 	scp ~/Documents/SCRIPTS/setupServer root@$1:setup
-	echo 'script copied to server'
+	echo 'setup script copied to server'
 fi

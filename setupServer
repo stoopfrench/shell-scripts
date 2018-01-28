@@ -15,7 +15,7 @@ if [ $1 = 'mongo' ]
 	apt install mongodb-server &&
 	echo 'installed mongo'
 fi
-echo 'packages installed succesfully'
+echo 'packages installed successfully'
 
 echo 'delete script?[y/n]'
 read confirm

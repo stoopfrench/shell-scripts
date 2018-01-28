@@ -1,16 +1,18 @@
 #!/bin/bash
 
-echo
+echo '====================='
 echo 'CHOOSE PROJECT TYPE:'
 echo '[1] JQuery'
 echo '[2] Vue'
 echo '[3] Node'
 echo
 echo '[x] exit script'
+echo '====================='
 read choice
 
 if [ $choice = '1' ] || [ $choice = '2' ] || [ $choice = '3' ]
-	then	
+	then
+	echo	
 	echo 'ENTER A PROJECT NAME:'
 	read name
 	echo

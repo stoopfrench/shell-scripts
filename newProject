@@ -10,21 +10,21 @@ read choice
 echo 'Title?'
 read name
 
-if [ $choice = '1' ]
+if [ $choice = '1' ] || [ $choice = 'Basic' ]
 	then
 	cp -rfiv ~/Documents/TEMPLATES/JQ_BS_EXPRESS ~/Documents/Projects/$name
 	echo "BASIC template copied, renamed "$name" and sent to Projects"
 fi
-if [ $choice = '2' ]
+if [ $choice = '2' ] || [ $choice = 'Vue' ]
 	then
 	cp -rfiv ~/Documents/TEMPLATES/VUE_BASIC ~/Documents/Projects/$name
 	echo "VUE template copied, renamed "$name" and sent to Projects"
 fi
-if [ $choice = '3' ]
+if [ $choice = '3' ] || [ $choice = 'Vue SPA' ]
 	then
 	echo 'unavailable'
 fi
-if [ $choice = '4' ]
+if [ $choice = '4' ] || [ $choice = 'Node' ]
 	then
 	cp -rfiv ~/Documents/TEMPLATES/NODE_APP ~/Documents/Projects/$name
 	echo "NODE template copied, renamed "$name" and sent to Projects"

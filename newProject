@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo 'Project Type?'
+echo 'Choose Project type:'
 echo '1. Basic'
 echo '2. Vue'
 echo '3. Vue SPA'
 echo '4. Node'
 read choice
 
-echo 'Title?'
+echo 'Enter Name:'
 read name
 
 if [ $choice = '1' ] || [ $choice = 'Basic' ]

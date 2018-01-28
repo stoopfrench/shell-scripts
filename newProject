@@ -19,7 +19,7 @@ fi
 case $choice in 
 	1) 
 		cp -rfiv ~/Documents/TEMPLATES/JQ_BS_EXPRESS ~/Documents/Projects/$name
-		echo "BASIC template copied, renamed "$name" and sent to Projects"
+		echo "JQUERY template copied, renamed "$name" and sent to Projects"
 		;;
 	2)
 		cp -rfiv ~/Documents/TEMPLATES/JQ_BS_EXPRESS ~/Documents/Projects/$name

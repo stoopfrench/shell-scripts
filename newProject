@@ -1,34 +1,44 @@
 #!/bin/bash
 
+echo
 echo 'CHOOSE PROJECT TYPE:'
-echo '1. JQuery'
-echo '2. Vue'
-echo '3. Vue SPA'
-echo '4. Node'
+echo '[1] JQuery'
+echo '[2] Vue'
+echo '[3] Node'
+echo
+echo '[x] exit script'
 read choice
 
-echo 'ENTER A PROJECT NAME:'
-read name
+if [ $choice = '1' ] || [ $choice = '2' ] || [ $choice = '3' ]
+	then	
+	echo 'ENTER A PROJECT NAME:'
+	read name
+	echo
+fi
 
-if [ $choice = '1' ] || [ $choice = 'JQuery' ]
-	then
-	cp -rfiv ~/Documents/TEMPLATES/JQ_BS_EXPRESS ~/Documents/Projects/$name
-	echo "BASIC template copied, renamed "$name" and sent to Projects"
-fi
-if [ $choice = '2' ] || [ $choice = 'Vue' ]
-	then
-	cp -rfiv ~/Documents/TEMPLATES/VUE_BASIC ~/Documents/Projects/$name
-	echo "VUE template copied, renamed "$name" and sent to Projects"
-fi
-if [ $choice = '3' ] || [ $choice = 'Vue SPA' ]
-	then
-	echo 'unavailable'
-fi
-if [ $choice = '4' ] || [ $choice = 'Node' ]
-	then
-	cp -rfiv ~/Documents/TEMPLATES/NODE_APP ~/Documents/Projects/$name
-	echo "NODE template copied, renamed "$name" and sent to Projects"
-fi
+case $choice in 
+	1) 
+		cp -rfiv ~/Documents/TEMPLATES/JQ_BS_EXPRESS ~/Documents/Projects/$name
+		echo "BASIC template copied, renamed "$name" and sent to Projects"
+		;;
+	2)
+		cp -rfiv ~/Documents/TEMPLATES/JQ_BS_EXPRESS ~/Documents/Projects/$name
+	 	echo "BASIC template copied, renamed "$name" and sent to Projects"
+	 	;;
+	3)
+		cp -rfiv ~/Documents/TEMPLATES/NODE_APP ~/Documents/Projects/$name
+	 	echo "NODE template copied, renamed "$name" and sent to Projects"
+	 	;;
+	x) 
+		exit
+		;;
+	*) 
+		echo
+		echo "INVALID CHOICE"
+		$(basename $0) && exit
+		;;
+esac	
+
 
 
 

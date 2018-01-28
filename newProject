@@ -22,8 +22,8 @@ case $choice in
 		echo "JQUERY template copied, renamed "$name" and sent to Projects"
 		;;
 	2)
-		cp -rfiv ~/Documents/TEMPLATES/JQ_BS_EXPRESS ~/Documents/Projects/$name
-	 	echo "BASIC template copied, renamed "$name" and sent to Projects"
+		cp -rfiv ~/Documents/TEMPLATES/VUE_BASIC ~/Documents/Projects/$name
+	 	echo "VUE template copied, renamed "$name" and sent to Projects"
 	 	;;
 	3)
 		cp -rfiv ~/Documents/TEMPLATES/NODE_APP ~/Documents/Projects/$name

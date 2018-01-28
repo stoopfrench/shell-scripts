@@ -1,16 +1,16 @@
 #!/bin/bash
 
-echo 'Choose Project type:'
-echo '1. Basic'
+echo 'CHOOSE PROJECT TYPE:'
+echo '1. JQuery'
 echo '2. Vue'
 echo '3. Vue SPA'
 echo '4. Node'
 read choice
 
-echo 'Enter Name:'
+echo 'ENTER A PROJECT NAME:'
 read name
 
-if [ $choice = '1' ] || [ $choice = 'Basic' ]
+if [ $choice = '1' ] || [ $choice = 'JQuery' ]
 	then
 	cp -rfiv ~/Documents/TEMPLATES/JQ_BS_EXPRESS ~/Documents/Projects/$name
 	echo "BASIC template copied, renamed "$name" and sent to Projects"

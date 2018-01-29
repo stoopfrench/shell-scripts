@@ -3,26 +3,35 @@
 ## Automates NODE, NPM, FOREVER, MONGO installation on a server
 
 apt-get update && 
-echo 'updated'
+echo 'UPDATED'
 apt install npm && 
-echo 'installed npm'
+echo 'INSTALLED NPM'
 apt install nodejs-legacy &&
-echo 'installed Node.js'
+echo 'INSTALLED NODE'
 npm install -g forever &&
-echo 'installed Forever.js'
-if [ $1 = 'mongo' ]
+echo 'INSTALLED FOREVER'
+
+echo '======================='
+echo 'install MondoDB?[y/n]'
+read mongo
+if [ $mongo = 'y' ]
 	then
 	apt install mongodb-server &&
 	echo 'installed mongo'
 fi
-echo 'packages installed successfully'
 
+echo
+echo 'ALL PACKAGES INSTALLED SUCCESSFULLY'
+echo
+
+echo '======================='
 echo 'delete script?[y/n]'
 read confirm
 if [ $confirm = 'y' ]
 	then
-	rm $0
-	echo 'script deleted'
+	rm $0 
+	echo 'SCRIPT DELETED'
+	exit
 fi
 
 

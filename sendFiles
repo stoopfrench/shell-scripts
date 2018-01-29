@@ -2,6 +2,7 @@
 
 ##SENDS '.bash_aliases' TO SERVER AT $1
 
+echo '=========================='
 echo 'send .bash_aliases?[y/n]'
 read ba 
 if [ $ba = 'y' ]
@@ -10,10 +11,11 @@ if [ $ba = 'y' ]
 	echo ".bash_aliases uploaded to remote server"
 fi
 
+echo '=========================='
 echo 'send setup script?[y/n]'
 read script
 if [ $script = 'y' ]
 	then
-	scp ~/Documents/SCRIPTS/setupServer root@$1:setup
+	scp ~/Documents/SCRIPTS/setupServer root@$1:Setup
 	echo 'setup script uploaded to remote server'
 fi

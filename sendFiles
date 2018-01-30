@@ -1,6 +1,6 @@
 #!/bin/bash
 
-##SENDS '.bash_aliases' TO SERVER AT $1
+##SENDS '.bash_aliases' AND 'Setup Script' TO SERVER AT $1
 
 echo '=========================='
 echo 'send .bash_aliases?[y/n]'

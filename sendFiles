@@ -8,7 +8,7 @@ read ba
 if [ $ba = 'y' ]
 	then
 	scp ~/.bash_aliases root@$1:.bash_aliases
-	echo ".bash_aliases uploaded to remote server"
+	echo ".bash_aliases UPLOADED TO REMOTE SERVER @ "$1""
 fi
 
 echo '=========================='
@@ -17,5 +17,5 @@ read script
 if [ $script = 'y' ]
 	then
 	scp ~/Documents/SCRIPTS/setupServer root@$1:Setup
-	echo 'setup script uploaded to remote server'
+	echo "setup script UPLOADED TO REMOTE SERVER @ "$1""
 fi

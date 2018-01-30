@@ -17,7 +17,7 @@ read mongo
 if [ $mongo = 'y' ]
 	then
 	apt install mongodb-server &&
-	echo 'installed mongo'
+	echo 'INSTALLED MONGO'
 fi
 
 echo

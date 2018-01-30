@@ -6,12 +6,13 @@ echo '[1] Basic'
 echo '[2] JQuery'
 echo '[3] Vue'
 echo '[4] Node'
+echo '[5] Web-Scraper'
 echo
 echo '[x] exit script'
 echo '====================='
 read choice
 
-if [ $choice = '1' ] || [ $choice = '2' ] || [ $choice = '3' ]
+if [ $choice = '1' ] || [ $choice = '2' ] || [ $choice = '3' ] || [ $choice = '4' ] || [ $choice = '5' ]
 	then
 	echo	
 	echo 'ENTER A PROJECT NAME:'
@@ -36,6 +37,10 @@ case $choice in
 	4)
 		cp -rfiv ~/Documents/TEMPLATES/NODE_APP ~/Documents/Projects/$name
 	 	echo "NODE template copied, renamed "$name" and sent to Projects"
+	 	;;
+	5)
+		cp -rfiv ~/Documents/TEMPLATES/WEB-SCRAPER ~/Documents/Projects/$name
+	 	echo "WEB-SCRAPER template copied, renamed "$name" and sent to Projects"
 	 	;;
 	x) 
 		exit

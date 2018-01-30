@@ -12,7 +12,7 @@ echo '[x] exit script'
 echo '====================='
 read choice
 
-if [ $choice = '1' ] || [ $choice = '2' ] || [ $choice = '3' ] || [ $choice = '4' ] || [ $choice = '5' ]
+if [[ $choice = [1-5] ]]
 	then
 	echo	
 	echo 'ENTER A PROJECT NAME:'

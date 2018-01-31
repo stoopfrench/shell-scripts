@@ -4,8 +4,8 @@ echo '====================='
 echo 'CHOOSE PROJECT TYPE:'
 echo '[1] Basic'
 echo '[2] JQuery'
-echo '[3] Vue'
-echo '[4] Node'
+echo '[3] Node'
+echo '[4] Vue'
 echo '[5] Web-Scraper'
 echo
 echo '[x] exit script'
@@ -31,12 +31,12 @@ case $choice in
 		echo "JQUERY template copied, renamed "$name" and sent to Projects"
 		;;
 	3)
-		cp -rfiv ~/Documents/TEMPLATES/VUE_BASIC ~/Documents/Projects/$name
-	 	echo "VUE template copied, renamed "$name" and sent to Projects"
-	 	;;
-	4)
 		cp -rfiv ~/Documents/TEMPLATES/NODE_APP ~/Documents/Projects/$name
 	 	echo "NODE template copied, renamed "$name" and sent to Projects"
+	 	;;
+	4)
+		cp -rfiv ~/Documents/TEMPLATES/VUE_BASIC ~/Documents/Projects/$name
+	 	echo "VUE template copied, renamed "$name" and sent to Projects"
 	 	;;
 	5)
 		cp -rfiv ~/Documents/TEMPLATES/WEB-SCRAPER ~/Documents/Projects/$name

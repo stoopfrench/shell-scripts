@@ -12,7 +12,7 @@ npm install -g forever &&
 echo 'INSTALLED FOREVER'
 
 echo '======================='
-echo 'install MondoDB?[y/n]'
+echo 'install MongoDB?[y/n]'
 read mongo
 if [ $mongo = 'y' ]
 	then

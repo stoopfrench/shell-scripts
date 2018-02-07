@@ -22,8 +22,8 @@ fi
 
 echo '=========================='
 echo 'install Web-Scraper?[y/n]'
-read electron
-if [ $electron = 'y' ]
+read scraper
+if [ $scraper = 'y' ]
 	then
 	sudo apt-get update &&
 	echo 'UPDATED'
@@ -41,8 +41,8 @@ echo
 
 echo '======================='
 echo 'delete script?[y/n]'
-read confirm
-if [ $confirm = 'y' ]
+read delete
+if [ $delete = 'y' ]
 	then
 	rm $0 
 	echo 'SCRIPT DELETED'

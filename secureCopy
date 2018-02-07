@@ -1,0 +1,21 @@
+#!/bin/bash
+
+## Securely transfer files up to a server
+
+echo '==========================='
+echo 'ENTER SERVER URL:'
+read url
+echo
+echo '==========================='
+echo 'ENTER FOLDER NAME:'
+read folder
+echo
+echo '==========================='
+echo 'ENTER FILE TO COPY:'
+read copy
+echo
+
+if [[ ! -z $url ]] && [[ ! -z $folder ]] && [[ ! -z $copy ]]
+	then
+	scp ~/Documents/Projects/$folder/$copy root@$url:/opt/$folder/$copy
+fi

@@ -7,14 +7,15 @@ echo '[2] JQuery'
 echo '[3] Node'
 echo '[4] Vue'
 echo '[5] Web-Scraper'
+echo '[6] RESTful API'
 echo
 echo '[x] exit script'
 echo '====================='
 read choice
 
-if [[ $choice = [1-5] ]]
+if [[ $choice = [1-6] ]]
 	then
-	echo	
+	echo '----------------------'	
 	echo 'ENTER A PROJECT NAME:'
 	read name
 	echo
@@ -41,6 +42,10 @@ case $choice in
 	5)
 		cp -rfiv ~/Documents/TEMPLATES/WEB-SCRAPER ~/Documents/Projects/$name
 	 	echo "WEB-SCRAPER template copied, renamed "$name" and sent to Projects"
+	 	;;
+	6)
+		cp -rfiv ~/Documents/TEMPLATES/REST_NODE ~/Documents/Projects/$name
+	 	echo "RESTful API template copied, renamed "$name" and sent to Projects"
 	 	;;
 	x) 
 		exit

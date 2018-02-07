@@ -3,8 +3,8 @@
 ## Securely transfer files up to a server
 
 echo '==========================='
-echo 'ENTER SERVER URL:'
-read url
+echo 'ENTER SERVER ADDRESS:'
+read address
 echo
 echo '==========================='
 echo 'ENTER FOLDER NAME:'
@@ -15,7 +15,7 @@ echo 'ENTER FILE TO COPY:'
 read copy
 echo
 
-if [[ ! -z $url ]] && [[ ! -z $folder ]] && [[ ! -z $copy ]]
+if [[ ! -z $address ]] && [[ ! -z $folder ]] && [[ ! -z $copy ]]
 	then
-	scp ~/Documents/Projects/$folder/$copy root@$url:/opt/$folder/$copy
+	scp ~/Documents/Projects/$folder/$copy root@$address:/opt/$folder/$copy
 fi

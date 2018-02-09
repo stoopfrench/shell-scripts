@@ -1,5 +1,7 @@
 #!/bin/bash
 
+## Generates a new project from a template
+
 echo '====================='
 echo 'CHOOSE PROJECT TYPE:'
 echo '[1] Basic'

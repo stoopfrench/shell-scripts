@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## Automates NODE, NPM, FOREVER, MONGO installation on a server
+## Automates NODE, NPM, FOREVER, MONGO, Web-Scraper installation on a server
 
 apt-get update && 
 echo 'UPDATED'

@@ -18,4 +18,8 @@ echo
 if [[ ! -z $address ]] && [[ ! -z $folder ]] && [[ ! -z $copy ]]
 	then
 	scp ~/Documents/Projects/$folder/$copy root@$address:/opt/$folder/$copy
+else
+	echo 'Missing arguments. Try again.'
+	echo
+	$(basename $0) && exit
 fi

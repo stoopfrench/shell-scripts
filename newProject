@@ -21,6 +21,7 @@ if [[ $choice = [1-6] ]]
 	echo 'ENTER A PROJECT NAME:'
 	read name
 	echo
+else
 	echo "INVALID CHOICE"
 	$(basename $0) && exit
 fi

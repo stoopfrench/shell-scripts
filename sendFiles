@@ -1,21 +1,33 @@
 #!/bin/bash
 
-##SENDS '.bash_aliases' AND 'Setup Script' TO SERVER AT $1
+##SENDS '.bash_aliases' AND 'Setup Script' TO SERVER
 
 echo '=========================='
-echo 'send .bash_aliases?[y/n]'
-read ba 
-if [ $ba = 'y' ]
-	then
-	scp ~/.bash_aliases root@$1:.bash_aliases
-	echo ".bash_aliases UPLOADED TO REMOTE SERVER @ "$1""
-fi
+echo 'ENTER SERVER ADDRESS:'
+read address
+echo
 
-echo '=========================='
-echo 'send setup script?[y/n]'
-read script
-if [ $script = 'y' ]
+if [[ ! -z $address ]]
 	then
-	scp ~/Documents/SCRIPTS/setupServer root@$1:Setup
-	echo "setup script UPLOADED TO REMOTE SERVER @ "$1""
+	echo '=========================='
+	echo 'send .bash_aliases?[y/n]'
+	read ba 
+	if [ $ba = 'y' ]
+		then
+		scp ~/.bash_aliases root@$address:.bash_aliases
+		echo ".bash_aliases UPLOADED TO REMOTE SERVER @ "$address""
+	fi
+
+	echo '=========================='
+	echo 'send setup script?[y/n]'
+	read script
+	if [ $script = 'y' ]
+		then
+		scp ~/Documents/SCRIPTS/setupServer root@$address:Setup
+		echo "setup script UPLOADED TO REMOTE SERVER @ "$address""
+	fi
+else
+	echo 'No address. Try again'
+	echo
+	$(basename $0) && exit
 fi
